@@ -48,7 +48,7 @@ void create_player(Player_ship* player) {
 	player->reference_shape[1].color.b = 0.0;
 	player->reference_shape[1].color.a = 1.0;
 
-	//rightreference_
+	//right
 	player->reference_shape[2].position.x = WINDOW_WIDTH / 2.0f - 20;
 	player->reference_shape[2].position.y = WINDOW_HEIGHT / 2.0 + 20;
 	player->reference_shape[2].color.r = 1.0;
@@ -56,7 +56,8 @@ void create_player(Player_ship* player) {
 	player->reference_shape[2].color.b = 0.0;
 	player->reference_shape[2].color.a = 1.0;
 
-
+	player->center_x = WINDOW_WIDTH / 2.0f;
+	player->center_y = WINDOW_HEIGHT / 2.0f;
 
 	player->health = 100;
 	player->score = 0;

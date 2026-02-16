@@ -8,6 +8,8 @@ extern struct enemy_manager* get_enemy_manager();
 typedef struct player_ship {
 	SDL_Vertex shape[3];
 	SDL_Vertex reference_shape[3];
+	float center_x;
+	float center_y;
 	int health;
 	int score;
 } Player_ship;

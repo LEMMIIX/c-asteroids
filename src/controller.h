@@ -8,8 +8,6 @@
 #include "player.h"
 
 extern struct map_uint_bool key_state[];
-extern float Center_x;
-extern float Center_y;
 
 void turn_the_thing(float* x, float* y);
 
