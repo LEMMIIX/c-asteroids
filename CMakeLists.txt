@@ -21,4 +21,4 @@ target_link_libraries(shooty_triangle PRIVATE
 	SDL3_ttf::SDL3_ttf-static
 )
 
-target_compile_options(shooty_triangle PRIVATE -O2 -Wall -Wextra)
+target_compile_options(shooty_triangle PRIVATE -O2 -Wall -Wextra -fcompare-debug-second)
