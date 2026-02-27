@@ -11,6 +11,11 @@ Wiki completion:<br>
 
 ## Showcase 
 
+### Version 9:
+
+Changes:
+* properly implement `map<key,value>` logic in [`c_map.h`](src/c_map.h) with dynamic map resizing
+
 ### Version 8:
 
 ![version8](resources/readme/ship_v8.gif)<br>

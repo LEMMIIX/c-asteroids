@@ -8,15 +8,9 @@
 #include "player.h"
 #include "controller.h"
 
-struct map_uint_bool key_state[] = {
-	{SDLK_W, 0},	// move up
-	{SDLK_A, 0},	// move down
-	{SDLK_S, 0},	// move left
-	{SDLK_D, 0},	// move right
-	{SDLK_Q, 0},	// quit
-};
 
 extern Player_ship ship;
+struct map_uint_bool* key_state;
 
 float Mouse_x = WINDOW_WIDTH / 2.0f;
 float Mouse_y = WINDOW_HEIGHT / 2.0f;
@@ -97,34 +91,15 @@ void move_ship_right() {
 }
 
 void set_key_active(unsigned int key) {
-	const unsigned int size = sizeof(key_state) / sizeof(key_state[0]);
-	for (unsigned int i = 0; i < size; ++i) {
-		if (key == key_state[i].key) {
-			key_state[i].active = 1;
-		}
-	}
+	map_uint_bool_set_value(&key_state, key, true);
 }
 
 void set_key_inactive(unsigned int key) {
-	const unsigned int size = sizeof(key_state) / sizeof(key_state[0]);
-	for (unsigned int i = 0; i < size; ++i) {
-		if (key == key_state[i].key) {
-			key_state[i].active = 0;
-		}
-	}
+	map_uint_bool_set_value(&key_state, key, false);
 }
 
 bool is_key_active(unsigned int key) {
-	bool is_active = false;
-	
-	const unsigned int size = sizeof(key_state) / sizeof(key_state[0]);
-	for (unsigned int i = 0; i < size; ++i) {
-		if (key == key_state[i].key) {
-			is_active = key_state[i].active;
-		}
-	}
-
-	return is_active;
+	return map_uint_bool_get_value(&key_state, key);
 }
 
 SDL_Point get_player_pos() {
@@ -148,8 +123,8 @@ float get_player_rot() {
 }
 
 void flush_keystate() {
-	for (unsigned int i = 0; i < 5; ++i) {
-		key_state[i].active = false;
+	for (int i = 0; i < key_state->size; ++i) {
+		map_uint_bool_set_value(&key_state, key_state->struct_uint_bool[i].key, false);
 	}
 }
 

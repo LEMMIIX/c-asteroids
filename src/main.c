@@ -88,6 +88,9 @@ int main() {
 			|| bullets_manager_init() != 0
 			|| enemy_manager_init() != 0) {
 		printf("INITIALIZATION FAILED. Stopping program.\n");
+
+		game_state = QUIT;
+		
 		return SDL_APP_FAILURE;
 	} else {
 		SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
@@ -114,6 +117,19 @@ int main() {
 	const char* gameover_text = "G A M E  O V E R";
 	const char* gameover_controls = "R - restart\nQ - quit\n";
 	char score_string[12];
+
+	printf("setting movement controls\n");
+	key_state = malloc(sizeof(struct map_uint_bool) + 0 * sizeof(struct struct_uint_bool));
+	key_state->size = 0;
+	if (map_uint_bool_add(&key_state, SDLK_W)
+			|| map_uint_bool_add(&key_state, SDLK_A)
+			|| map_uint_bool_add(&key_state, SDLK_S)
+			|| map_uint_bool_add(&key_state, SDLK_D)
+			|| map_uint_bool_add(&key_state, SDLK_Q)) {
+		printf("settings movement controls FAILED - exiting\n");
+		return SDL_APP_FAILURE;
+	}
+
 
 	Uint64 last_tick = SDL_GetTicks();
 	Uint64 frame_count = 0;
@@ -280,6 +296,7 @@ int main() {
 	kill_font();
 	free_all_bullets();
 	free_all_enemies();
+	free_map_uint_bool(&key_state);
 
 	return 0;
 }

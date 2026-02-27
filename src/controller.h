@@ -7,7 +7,7 @@
 #include "c_map.h"
 #include "player.h"
 
-extern struct map_uint_bool key_state[];
+extern struct map_uint_bool* key_state;
 
 void turn_the_thing(float* x, float* y);
 
