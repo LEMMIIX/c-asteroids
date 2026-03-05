@@ -11,7 +11,7 @@
 
 
 Wiki completion:<br>
-- [ ] code doc
+- [x] code doc
 - [ ] architecture doc
 
 
