@@ -22,6 +22,9 @@ Wiki completion:<br>
 Changes:
 * properly implement `map<key,value>` logic in [`c_map.h`](src/c_map.h) with dynamic map resizing
 
+
+`e4762401eceb56a9e29254e81179c164a05e00db`
+
 ### Version 8:
 
 ![version8](resources/readme/ship_v8.gif)<br>
@@ -29,11 +32,17 @@ Changes:
 * add score counter that adds points if hit enemy, or subtracts if missed enemy
 * add small randomization to enemy direction
 
+
+`27ecde8224a5434dda1bebb172c1537d7bc0d0a9`
+
 ### Version 7:
 
 ![version7](resources/readme/ship_v7.gif)<br>
 Changes:
 * add pause and game-over menu which provides restart option
+
+
+`1aa04d2dc44dd4d74e6047503145636d997d1c7b`
 
 ### Version 6:
 
@@ -41,17 +50,26 @@ Changes:
 Changes:
 * add enemies that can be shot
 
+
+`36e7cbc2f5f250d761788534fc8064760d671c51`
+
 ### Version 5:
 
 ![version5](resources/readme/ship_v5.gif)<br>
 Changes:
 * shoot projectiles in player facing direction
 
+
+`69b22277ad60606e911b2b7241b6957dc3f860b3`
+
 ### Version 4:
 
 ![version4](resources/readme/ship_v4.gif)<br>
 Changes:
 * shoot variations of projectiles with mouse klick
+
+
+`02932c564615f79f1f1087c5d5991aa9e1a99cdd`
 
 ### Version 3:
 
@@ -62,16 +80,24 @@ Changes:
 * frame-independent movement using delta time
 * window boundary check for movement
 
+
+`1e7c7d8636095449e8f43e6b1eefb485dd59ea48`
+
 ### Version 2:
 
 ![version2](resources/readme/ship_v2.gif)<br>
 Changes:
 * rotating while moving
 
+
+`7bff79f5d5cbb0f7a877141cd86ec762366d4cb1`
+
 ### Version 1:
 
 ![version1](resources/readme/ship_v1.gif)<br>
 
+
+`d269adbef4c4c9de87efec055d1683076dcb219a`
 
 
 [wiki_img]:
