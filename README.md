@@ -1,5 +1,7 @@
 # C-Asteroids
 
+![banner](resources/readme/banner.png)<br>
+
 ![SDL3 badge](https://img.shields.io/badge/SDL3-2.22-659bd3)
 [![Wiki](https://img.shields.io/badge/wiki-FFFFFF?logo=Wikipedia&logoColor=000000)](https://github.com/LEMMIIX/c-asteroids/wiki) 
 [![YouTube](https://img.shields.io/badge/Dev_log-work_in_progress-0?logo=YouTube&logoColor=888888&labelColor=888888&style=social)](https://work_in_progress)
